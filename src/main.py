@@ -23,8 +23,6 @@ class ModelPredictionAquisition(BaseBatchAcquisitionFunction):
         print(type(pred_mean))
 
         if len(pred_mean) < select_size:
-            # raise ValueError("The number of query samples exceeds"
-            #                 "the size of the available data.")
             selected_indices = random.choices(available_indices, k=select_size)
             print("Error 1, picked random choice.")
             return selected_indices
